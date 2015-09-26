@@ -22,6 +22,7 @@
 		291EDC041BB6F5F60061216B /* LoginBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDC031BB6F5F60061216B /* LoginBackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDC061BB6F7670061216B /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDC051BB6F7670061216B /* ImageList.swift */; settings = {ASSET_TAGS = (); }; };
 		29D8A5E51BB70781000D8483 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D8A5E41BB70781000D8483 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		29D8A5E71BB70B3D000D8483 /* SignupScreenTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D8A5E61BB70B3D000D8483 /* SignupScreenTextField.swift */; settings = {ASSET_TAGS = (); }; };
 		62E43CD8E527331CF1F16EBC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C726429FC0E8C213D3C4FAB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		291EDC031BB6F5F60061216B /* LoginBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBackgroundView.swift; sourceTree = "<group>"; };
 		291EDC051BB6F7670061216B /* ImageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		29D8A5E41BB70781000D8483 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		29D8A5E61BB70B3D000D8483 /* SignupScreenTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupScreenTextField.swift; sourceTree = "<group>"; };
 		5CA3B7FB4D147108690F9E45 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7C726429FC0E8C213D3C4FAB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43173F41DA1409C9E1DB33A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		291EDBFA1BB699900061216B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				29D8A5E61BB70B3D000D8483 /* SignupScreenTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				291EDBEB1BB6923C0061216B /* LoginMainViewController.swift in Sources */,
 				291EDBDF1BB691AC0061216B /* AppDelegate.swift in Sources */,
 				291EDBFE1BB6ECC60061216B /* FontList.swift in Sources */,
+				29D8A5E71BB70B3D000D8483 /* SignupScreenTextField.swift in Sources */,
 				291EDBFC1BB699CA0061216B /* LoginBottomContainer.swift in Sources */,
 				291EDBEF1BB6928A0061216B /* ColorList.swift in Sources */,
 				291EDC061BB6F7670061216B /* ImageList.swift in Sources */,
