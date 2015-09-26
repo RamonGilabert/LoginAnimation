@@ -3,6 +3,12 @@ import Cartography
 
 class SignupScreenTextField: UIView {
 
+  struct Dimensions {
+    static let height: CGFloat = 52
+    static let offset: CGFloat = 72
+    static let offsetBetween: CGFloat = 12
+  }
+
   enum Kind {
     case Name, Email, Password
   }
