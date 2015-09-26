@@ -24,22 +24,35 @@ class LoginViewController: UIViewController {
     return button
     }()
 
+  lazy var container: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.clearColor()
+
+    return view
+    }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    for subview in [backgroundView, loginButton, logo, closeButton, emailTextField, passwordTextField] { view.addSubview(subview) }
-    setupConstraints()
+    for subview in [loginButton, logo, emailTextField, passwordTextField] { container.addSubview(subview) }
+    for subview in [backgroundView, container, closeButton] { view.addSubview(subview) }
 
+    setupConstraints()
     backgroundView.configureView()
+    container.frame = view.bounds
   }
 
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidAppear(animated: Bool) {
     subscribeNotifications()
   }
 
   override func viewWillDisappear(animated: Bool) {
     super.viewWillDisappear(animated)
+
+    UIView.animateWithDuration(0.15, animations: {
+      self.container.frame.origin.y = 0
+    })
+
     NSNotificationCenter.defaultCenter().removeObserver(self)
   }
 
@@ -86,7 +99,7 @@ class LoginViewController: UIViewController {
     }
   }
 
-  func subscbribeNotifications() {
+  func subscribeNotifications() {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
   }
@@ -104,14 +117,18 @@ class LoginViewController: UIViewController {
   // MARK: - Notification methods
 
   func keyboardWillShow(notification: NSNotification) {
-    UIView.animateWithDuration(0.4, animations: {
+    guard let userInfo = notification.userInfo,
+      keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue() else { return }
 
+    let value = self.loginButton.frame.origin.y + self.loginButton.frame.size.height - (UIScreen.mainScreen().bounds.height - keyboardFrame.height - 36)
+    UIView.animateWithDuration(0.15, animations: {
+      self.container.frame.origin.y = -value
     })
   }
 
   func keyboardWillHide(notification: NSNotification) {
-    UIView.animateWithDuration(0.4, animations: {
-      
+    UIView.animateWithDuration(0.15, animations: {
+      self.container.frame.origin.y = 0
     })
   }
 }
