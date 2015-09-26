@@ -25,12 +25,12 @@ class LoginBottomContainer: UIView {
       signup.top == signup.superview!.top
       signup.centerX == signup.superview!.centerX
       signup.width == signup.superview!.width
-      signup.height == signup.superview!.height
+      signup.height == LoginScreenButton.Dimensions.height
 
       login.bottom == login.superview!.bottom
       login.centerX == login.superview!.centerX
       login.width == login.superview!.width
-      login.height == login.superview!.height
+      login.height == LoginScreenButton.Dimensions.height
     }
   }
 }

@@ -1,5 +1,11 @@
 import UIKit
 
+protocol LoginScreenButtonDelegate: class {
+
+  func loginButtonDidPress()
+  func signupButtonDidPress()
+}
+
 class LoginScreenButton: UIButton {
 
   struct Dimensions {
@@ -12,6 +18,7 @@ class LoginScreenButton: UIButton {
     case Login, Signup
   }
 
+  weak var delegate: LoginScreenButtonDelegate?
   var kind: Kind
 
   required init(kind: Kind) {
@@ -29,18 +36,27 @@ class LoginScreenButton: UIButton {
 
   func setupConfiguration() {
     layer.cornerRadius = 6
-    setTitle("Login", forState: .Normal)
     titleLabel?.font = FontList.Login.button
 
     switch kind {
-    case .Login:
-      backgroundColor = ColorList.Login.button
-      setTitleColor(UIColor.whiteColor(), forState: .Normal)
     case .Signup:
+      backgroundColor = ColorList.Login.button
+      setTitle("Sign up", forState: .Normal)
+      setTitleColor(UIColor.whiteColor(), forState: .Normal)
+      addTarget(self, action: "signupButtonDidPress", forControlEvents: .TouchUpInside)
+    case .Login:
       backgroundColor = UIColor.clearColor()
       layer.borderWidth = 2
       layer.borderColor = ColorList.Login.button.CGColor
+      setTitle("Log in", forState: .Normal)
       setTitleColor(ColorList.Login.button, forState: .Normal)
+      addTarget(self, action: "loginButtonDidPress", forControlEvents: .TouchUpInside)
     }
   }
+
+  // MARK: - Action methods
+
+  func signupButtonDidPress() { delegate?.signupButtonDidPress() }
+  
+  func loginButtonDidPress() { delegate?.loginButtonDidPress() }
 }

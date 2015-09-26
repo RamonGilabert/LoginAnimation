@@ -7,7 +7,10 @@ class LoginViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = ColorList.Login.background
+
+    for subview in [loginBottomContainer] { view.addSubview(subview) }
+
+    setupConstraints()
   }
 
   func setupConstraints() {
