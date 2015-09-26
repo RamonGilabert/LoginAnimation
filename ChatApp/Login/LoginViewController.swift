@@ -91,7 +91,7 @@ class LoginViewController: UIViewController {
 
       loginButton.centerX == loginButton.superview!.centerX
       loginButton.top == loginButton.superview!.centerY + 70
-      loginButton.width == LoginScreenButton.Dimensions.width
+      loginButton.width == loginButton.superview!.width - LoginScreenButton.Dimensions.offset
       loginButton.height == LoginScreenButton.Dimensions.height
 
       emailTextField.bottom == passwordTextField.top - SignupScreenTextField.Dimensions.offsetBetween
@@ -122,7 +122,7 @@ class LoginViewController: UIViewController {
 
     let offsetValue: CGFloat = UIScreen.mainScreen().nativeBounds.height == 960 ? 12 : 36
     let value = self.loginButton.frame.origin.y + self.loginButton.frame.size.height - (UIScreen.mainScreen().bounds.height - keyboardFrame.height - offsetValue)
-    let logoAlpha: CGFloat = UIScreen.mainScreen().nativeBounds.height < 1335 ? 1 : 0
+    let logoAlpha: CGFloat = UIScreen.mainScreen().nativeBounds.height < 1137 ? 0 : 1
 
     UIView.animateWithDuration(0.15, animations: {
       self.container.frame.origin.y = -value

@@ -12,6 +12,7 @@ class LoginScreenButton: UIButton {
     static let width: CGFloat = 265
     static let height: CGFloat = 52
     static let paddingBetween: CGFloat = 12
+    static let offset: CGFloat = 110
   }
 
   enum Kind {

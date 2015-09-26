@@ -66,7 +66,7 @@ class LoginMainViewController: UIViewController {
       backgroundView.width == backgroundView.superview!.width
       backgroundView.height == backgroundView.superview!.height
 
-      loginBottomContainer.width == LoginScreenButton.Dimensions.width
+      loginBottomContainer.width == loginBottomContainer.superview!.width - LoginScreenButton.Dimensions.offset
       loginBottomContainer.height == LoginScreenButton.Dimensions.height * 2 + LoginScreenButton.Dimensions.paddingBetween
       loginBottomContainer.centerX == loginBottomContainer.superview!.centerX
       loginBottomContainer.bottom == loginBottomContainer.superview!.bottom - 75
