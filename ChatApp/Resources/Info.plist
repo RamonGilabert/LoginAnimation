@@ -2,12 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MainApp</key>
+	<key>MainApplication</key>
 	<dict>
-		<key>ClientKey</key>
-		<string>Ku6j9PilD0ieGu9g89ZkC8ozyZbTx3YCMuT5CmJc</string>
-		<key>ApplicationID</key>
-		<string>sP8l2ueODwtmMZ0PPunp4a1urPJ72ZMaIQ5Cy560</string>
+		<key>Parse</key>
+		<dict>
+			<key>ApplicationID</key>
+			<string>sP8l2ueODwtmMZ0PPunp4a1urPJ72ZMaIQ5Cy560</string>
+			<key>ClientKey</key>
+			<string>Ku6j9PilD0ieGu9g89ZkC8ozyZbTx3YCMuT5CmJc</string>
+		</dict>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

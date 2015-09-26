@@ -11,15 +11,15 @@ struct Information {
     }
 
     return (applicationID: applicationID, clientKey: clientKey)
-  }()
+    }()
 
   static let configuration: [String: AnyObject] = {
     guard let information = NSBundle.mainBundle().infoDictionary,
-      configuration = information["MainApp"] as? [String: AnyObject] else {
+      configuration = information["MainApplication"] as? [String: AnyObject] else {
         print("Configuration missing.")
         abort()
     }
 
     return configuration
-  }()
+    }()
 }
