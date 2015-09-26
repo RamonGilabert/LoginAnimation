@@ -14,6 +14,7 @@
 		291EDBE91BB691BE0061216B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 291EDBE61BB691BE0061216B /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		291EDBEB1BB6923C0061216B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBEA1BB6923C0061216B /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBED1BB692450061216B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBEC1BB692450061216B /* SignupViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		291EDBEF1BB6928A0061216B /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBEE1BB6928A0061216B /* ColorList.swift */; settings = {ASSET_TAGS = (); }; };
 		62E43CD8E527331CF1F16EBC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C726429FC0E8C213D3C4FAB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		291EDBE61BB691BE0061216B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		291EDBEA1BB6923C0061216B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		291EDBEC1BB692450061216B /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		291EDBEE1BB6928A0061216B /* ColorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		5CA3B7FB4D147108690F9E45 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7C726429FC0E8C213D3C4FAB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43173F41DA1409C9E1DB33A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		291EDBDA1BB691550061216B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				291EDBEE1BB6928A0061216B /* ColorList.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				291EDBEB1BB6923C0061216B /* LoginViewController.swift in Sources */,
 				291EDBDF1BB691AC0061216B /* AppDelegate.swift in Sources */,
 				291EDBED1BB692450061216B /* SignupViewController.swift in Sources */,
+				291EDBEF1BB6928A0061216B /* ColorList.swift in Sources */,
 				291EDBE11BB691B30061216B /* ChatsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
