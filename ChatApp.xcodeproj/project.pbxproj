@@ -71,8 +71,8 @@
 			children = (
 				291EDBC61BB68C230061216B /* ChatApp */,
 				291EDBC51BB68C230061216B /* Products */,
-				28273030DCD37DF6755A906D /* Pods */,
 				D5485710A497CCAE160C67BC /* Frameworks */,
+				28273030DCD37DF6755A906D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};

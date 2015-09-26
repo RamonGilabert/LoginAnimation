@@ -15,8 +15,13 @@ class LoginBackgroundView: UIView {
     return visualView
     }()
 
-  lazy var termsAndConditions: UIButton = {
+  lazy var termsAndConditions: UIButton = { [unowned self] in
     let button = UIButton()
+    button.setTitle("Read the terms & conditions for our app.", forState: .Normal)
+    button.setTitleColor(ColorList.Login.terms, forState: .Normal)
+    button.titleLabel?.font = FontList.Login.terms
+    button.addTarget(self, action: "termsAndConditionsDidPress", forControlEvents: UIControlEvents.TouchUpInside)
+
     return button
     }()
 
@@ -40,5 +45,11 @@ class LoginBackgroundView: UIView {
       termsAndConditions.centerX == termsAndConditions.superview!.centerX
       termsAndConditions.bottom == termsAndConditions.superview!.bottom - 6
     }
+  }
+
+  // MARK: - Actions
+
+  func termsAndConditionsDidPress() {
+    print("Terms and conditions")
   }
 }
