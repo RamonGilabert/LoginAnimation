@@ -1,6 +1,6 @@
 import UIKit
 
-class ChatsTableViewController: UIViewController {
+class ChatsTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
