@@ -34,14 +34,13 @@ class LoginBottomContainer: UIView {
   func setupConstraints() {
     constrain(signupButton, loginButton) { signup, login in
       signup.top == signup.superview!.top
-      signup.centerX == signup.superview!.centerX
-      signup.width == signup.superview!.width
-      signup.height == LoginScreenButton.Dimensions.height
-
       login.bottom == login.superview!.bottom
-      login.centerX == login.superview!.centerX
-      login.width == login.superview!.width
-      login.height == LoginScreenButton.Dimensions.height
+
+      for button in [signup, login] {
+        button.centerX == button.superview!.centerX
+        button.width == button.superview!.width
+        button.height == LoginScreenButton.Dimensions.height
+      }
     }
   }
 }
