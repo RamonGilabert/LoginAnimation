@@ -5,6 +5,7 @@ class LoginBackgroundView: UIView {
 
   lazy var backgroundImage: UIImageView = {
     let imageView = UIImageView()
+    imageView.image = 
     return imageView
     }()
 
