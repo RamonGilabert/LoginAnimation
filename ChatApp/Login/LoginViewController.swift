@@ -43,12 +43,17 @@ class LoginViewController: UIViewController {
   }
 
   override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+
     subscribeNotifications()
+    emailTextField.textField.becomeFirstResponder()
   }
 
   override func viewWillDisappear(animated: Bool) {
     super.viewWillDisappear(animated)
 
+    view.endEditing(true)
+    
     UIView.animateWithDuration(0.15, animations: {
       self.container.frame.origin.y = 0
     })
