@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
       backgroundView.height == backgroundView.superview!.height
 
       logo.centerX == logo.superview!.centerX
-      logo.centerY == logo.superview!.centerY - totalHeight / 4 - 40
+      logo.centerY == logo.superview!.centerY - totalHeight / 4 - 30
       logo.width == 150
       logo.height == 90
 
@@ -121,14 +121,18 @@ class LoginViewController: UIViewController {
       keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue() else { return }
 
     let value = self.loginButton.frame.origin.y + self.loginButton.frame.size.height - (UIScreen.mainScreen().bounds.height - keyboardFrame.height - 36)
+    let logoAlpha: CGFloat = UIScreen.mainScreen().nativeBounds.height < 1335 ? 1 : 0
+
     UIView.animateWithDuration(0.15, animations: {
       self.container.frame.origin.y = -value
+      self.logo.alpha = logoAlpha
     })
   }
 
   func keyboardWillHide(notification: NSNotification) {
     UIView.animateWithDuration(0.15, animations: {
       self.container.frame.origin.y = 0
+      self.logo.alpha = 1
     })
   }
 }
