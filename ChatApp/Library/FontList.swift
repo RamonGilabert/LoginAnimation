@@ -15,5 +15,6 @@ struct FontList {
     static let subtitle = UIFont(name: HelveticaNeue.thinItalic, size: 16)!
     static let button = UIFont(name: HelveticaNeue.regular, size: 20)!
     static let terms = UIFont(name: HelveticaNeue.lightItalic, size: 14)!
+    static let textField = UIFont(name: HelveticaNeue.light, size: 16)!
   }
 }
