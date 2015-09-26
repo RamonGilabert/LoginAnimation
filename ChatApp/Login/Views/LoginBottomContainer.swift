@@ -15,7 +15,7 @@ class LoginBottomContainer: UIView {
   }
 
   required init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
+    fatalError("init(coder:) has not been implemented")
   }
 
   // MARK: - Constraints
@@ -24,13 +24,13 @@ class LoginBottomContainer: UIView {
     constrain(signupButton, loginButton) { signup, login in
       signup.top == signup.superview!.top
       signup.centerX == signup.superview!.centerX
-      signup.width == LoginScreenButton.Dimensions.width
-      signup.height == LoginScreenButton.Dimensions.height
+      signup.width == signup.superview!.width
+      signup.height == signup.superview!.height
 
-      login.top == signup.bottom + LoginScreenButton.Dimensions.paddingBetween
+      login.bottom == login.superview!.bottom
       login.centerX == login.superview!.centerX
-      login.width == LoginScreenButton.Dimensions.width
-      login.height == LoginScreenButton.Dimensions.height
+      login.width == login.superview!.width
+      login.height == login.superview!.height
     }
   }
 }
