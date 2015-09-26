@@ -81,4 +81,8 @@ class LoginViewController: UIViewController {
   func closeButtonDidPress() {
     dismissViewControllerAnimated(true, completion: nil)
   }
+
+  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    view.endEditing(true)
+  }
 }
