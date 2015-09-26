@@ -1,7 +1,7 @@
 import UIKit
 import Cartography
 
-class LoginViewController: UIViewController {
+class LoginMainViewController: UIViewController {
 
   lazy var backgroundView: LoginBackgroundView = LoginBackgroundView()
   lazy var loginBottomContainer: LoginBottomContainer = LoginBottomContainer()

@@ -11,7 +11,7 @@
 		291EDBE11BB691B30061216B /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBE01BB691B30061216B /* ChatsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBE71BB691BE0061216B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291EDBE21BB691BE0061216B /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		291EDBE81BB691BE0061216B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291EDBE41BB691BE0061216B /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		291EDBEB1BB6923C0061216B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBEA1BB6923C0061216B /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		291EDBEB1BB6923C0061216B /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBEA1BB6923C0061216B /* LoginMainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBEF1BB6928A0061216B /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBEE1BB6928A0061216B /* ColorList.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBF11BB693B20061216B /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBF01BB693B20061216B /* Information.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBF51BB6956A0061216B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 291EDBF41BB6956A0061216B /* Info.plist */; settings = {ASSET_TAGS = (); }; };
@@ -30,7 +30,7 @@
 		291EDBE01BB691B30061216B /* ChatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		291EDBE21BB691BE0061216B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291EDBE51BB691BE0061216B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		291EDBEA1BB6923C0061216B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		291EDBEA1BB6923C0061216B /* LoginMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
 		291EDBEE1BB6928A0061216B /* ColorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
 		291EDBF01BB693B20061216B /* Information.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		291EDBF41BB6956A0061216B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				291EDBF91BB699850061216B /* Views */,
-				291EDBEA1BB6923C0061216B /* LoginViewController.swift */,
+				291EDBEA1BB6923C0061216B /* LoginMainViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -310,7 +310,7 @@
 				291EDC001BB6EDF60061216B /* LoginScreenButton.swift in Sources */,
 				291EDC041BB6F5F60061216B /* LoginBackgroundView.swift in Sources */,
 				291EDBF81BB6996F0061216B /* SignupViewController.swift in Sources */,
-				291EDBEB1BB6923C0061216B /* LoginViewController.swift in Sources */,
+				291EDBEB1BB6923C0061216B /* LoginMainViewController.swift in Sources */,
 				291EDBDF1BB691AC0061216B /* AppDelegate.swift in Sources */,
 				291EDBFE1BB6ECC60061216B /* FontList.swift in Sources */,
 				291EDBFC1BB699CA0061216B /* LoginBottomContainer.swift in Sources */,
