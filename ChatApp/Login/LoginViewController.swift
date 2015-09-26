@@ -126,7 +126,7 @@ class LoginViewController: UIViewController {
       keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue() else { return }
 
     let offsetValue: CGFloat = UIScreen.mainScreen().nativeBounds.height == 960 ? 12 : 36
-    let value = self.loginButton.frame.origin.y + self.loginButton.frame.size.height - (UIScreen.mainScreen().bounds.height - keyboardFrame.height - offsetValue)
+    let value = loginButton.frame.origin.y + loginButton.frame.size.height - (UIScreen.mainScreen().bounds.height - keyboardFrame.height - offsetValue)
     let logoAlpha: CGFloat = UIScreen.mainScreen().nativeBounds.height < 1137 ? 0 : 1
 
     UIView.animateWithDuration(0.15, animations: {

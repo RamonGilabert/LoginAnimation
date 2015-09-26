@@ -18,6 +18,7 @@ class SignupScreenTextField: UIView {
     let textField = UITextField()
     textField.font = FontList.Login.textField
     textField.textColor = UIColor.whiteColor()
+    textField.tintColor = UIColor.whiteColor()
 
     return textField
     }()
