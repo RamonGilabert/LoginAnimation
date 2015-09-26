@@ -6,10 +6,30 @@ class LoginViewController: UIViewController {
   lazy var backgroundView: LoginBackgroundView = LoginBackgroundView()
   lazy var loginBottomContainer: LoginBottomContainer = LoginBottomContainer()
 
+  lazy var logo: UIImageView = {
+    let imageView = UIImageView()
+    return imageView
+    }()
+
+  lazy var welcomeTitle: UILabel = {
+    let label = UILabel()
+    return label
+    }()
+
+  lazy var separator: UIView = {
+    let view = UIView()
+    return view
+    }()
+
+  lazy var subtitle: UILabel = {
+    let label = UILabel()
+    return label
+    }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    for subview in [backgroundView, loginBottomContainer] { view.addSubview(subview) }
+    for subview in [backgroundView, loginBottomContainer, welcomeTitle, separator, subtitle] { view.addSubview(subview) }
     setupConstraints()
 
     backgroundView.configureView()
@@ -27,6 +47,10 @@ class LoginViewController: UIViewController {
       loginBottomContainer.height == LoginScreenButton.Dimensions.height * 2 + LoginScreenButton.Dimensions.paddingBetween
       loginBottomContainer.centerX == loginBottomContainer.superview!.centerX
       loginBottomContainer.bottom == loginBottomContainer.superview!.bottom - 75
+    }
+
+    constrain(welcomeTitle, separator, subtitle) { welcomeTitle, separator, subtitle in
+
     }
   }
 
