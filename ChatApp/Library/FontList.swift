@@ -2,7 +2,7 @@ import UIKit
 
 struct FontList {
 
-  struct HelveticaNeue {
+  private struct HelveticaNeue {
     static let regular = "HelveticaNeue"
     static let medium = "HelveticaNeue-Medium"
     static let thinItalic = "HelveticaNeue-ThinItalic"
