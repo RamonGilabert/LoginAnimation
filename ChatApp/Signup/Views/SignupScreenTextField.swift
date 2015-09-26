@@ -80,7 +80,7 @@ class SignupScreenTextField: UIView {
       logo.height == logoSize.height
 
       textField.left == textField.superview!.left + Dimensions.offsetLeft
-      textField.centerY == textField.superview!.centerY
+      textField.centerY == textField.superview!.centerY + 1
       textField.width == textField.superview!.width - Dimensions.offsetLeft
       textField.height == textField.superview!.height
     }
