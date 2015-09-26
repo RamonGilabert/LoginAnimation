@@ -33,6 +33,16 @@ class LoginViewController: UIViewController {
     backgroundView.configureView()
   }
 
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    subscribeNotifications()
+  }
+
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+  }
+
   override func prefersStatusBarHidden() -> Bool {
     return true
   }
@@ -76,6 +86,11 @@ class LoginViewController: UIViewController {
     }
   }
 
+  func subscbribeNotifications() {
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+  }
+
   // MARK: - Action methods
 
   func closeButtonDidPress() {
@@ -84,5 +99,19 @@ class LoginViewController: UIViewController {
 
   override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     view.endEditing(true)
+  }
+
+  // MARK: - Notification methods
+
+  func keyboardWillShow(notification: NSNotification) {
+    UIView.animateWithDuration(0.4, animations: {
+
+    })
+  }
+
+  func keyboardWillHide(notification: NSNotification) {
+    UIView.animateWithDuration(0.4, animations: {
+      
+    })
   }
 }
