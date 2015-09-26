@@ -71,8 +71,8 @@ class LoginViewController: UIViewController {
       loginButton.width == LoginScreenButton.Dimensions.width
       loginButton.height == LoginScreenButton.Dimensions.height
 
-      emailTextField.bottom == passwordTextField.superview!.top + SignupScreenTextField.Dimensions.offsetBetween
-      passwordTextField.bottom == loginButton.superview!.top + 36
+      emailTextField.bottom == passwordTextField.top - SignupScreenTextField.Dimensions.offsetBetween
+      passwordTextField.bottom == loginButton.top - 36
     }
   }
 

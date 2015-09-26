@@ -40,6 +40,11 @@ class SignupScreenTextField: UIView {
   // MARK: - Configuration
 
   func setupConfiguration() {
+    backgroundColor = UIColor.clearColor()
+    layer.cornerRadius = 6
+    layer.borderColor = UIColor.whiteColor().CGColor
+    layer.borderWidth = 2
+
     switch kind {
     case .Name:
       print("Name")
