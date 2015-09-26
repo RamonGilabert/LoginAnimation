@@ -7,3 +7,4 @@ inhibit_all_warnings!
 
 pod 'Parse'
 pod 'Cartography'
+pod 'Transition', git: 'https://github.com/hyperoslo/Transition', branch: 'swift2'

@@ -3,14 +3,27 @@ PODS:
   - Cartography (0.6.0)
   - Parse (1.8.5):
     - Bolts/Tasks (>= 1.2.2)
+  - Transition (0.1.0)
 
 DEPENDENCIES:
   - Cartography
   - Parse
+  - Transition (from `https://github.com/hyperoslo/Transition`, branch `swift2`)
+
+EXTERNAL SOURCES:
+  Transition:
+    :branch: swift2
+    :git: https://github.com/hyperoslo/Transition
+
+CHECKOUT OPTIONS:
+  Transition:
+    :commit: 6158305dc45c80ea52bd40ca81aa5981150aa63c
+    :git: https://github.com/hyperoslo/Transition
 
 SPEC CHECKSUMS:
   Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
+  Transition: 66d86e3ae1b8f0b3d9ba2000c7a45fbc17b066f2
 
 COCOAPODS: 0.39.0.beta.4

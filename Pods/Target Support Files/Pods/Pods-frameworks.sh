@@ -85,9 +85,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Bolts.framework"
   install_framework "Pods/Cartography.framework"
   install_framework "Pods/Parse.framework"
+  install_framework "Pods/Transition.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Bolts.framework"
   install_framework "Pods/Cartography.framework"
   install_framework "Pods/Parse.framework"
+  install_framework "Pods/Transition.framework"
 fi
