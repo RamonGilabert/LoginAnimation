@@ -8,6 +8,8 @@ class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    loginBottomContainer.delegate = self
+
     for subview in [loginBottomContainer] { view.addSubview(subview) }
 
     setupConstraints()
@@ -20,5 +22,16 @@ class LoginViewController: UIViewController {
       loginBottomContainer.centerX == loginBottomContainer.superview!.centerX
       loginBottomContainer.bottom == loginBottomContainer.superview!.bottom - 75
     }
+  }
+}
+
+extension LoginViewController: LoginBottomContainerDelegate {
+
+  func signupButtonDidPress() {
+    print("Signup")
+  }
+
+  func loginButtonDidPress() {
+    print("Login")
   }
 }
