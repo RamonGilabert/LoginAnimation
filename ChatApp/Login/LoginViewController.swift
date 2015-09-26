@@ -1,5 +1,6 @@
 import UIKit
 import Cartography
+import Transition
 
 class LoginViewController: UIViewController {
 
@@ -31,12 +32,23 @@ class LoginViewController: UIViewController {
     return view
     }()
 
+  lazy var transitionManager: Transition = {
+    let manager = Transition() { controller, show in
+      if let controller = controller as? LoginMainViewController {
+        self.loginButton.frame.origin.y = controller.loginBottomContainer.loginButton.frame.origin.y
+      }
+    }
+
+    return manager
+    }()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     for subview in [loginButton, logo, emailTextField, passwordTextField] { container.addSubview(subview) }
     for subview in [backgroundView, container, closeButton] { view.addSubview(subview) }
 
+    transitioningDelegate = transitionManager
     setupConstraints()
     backgroundView.configureView()
     container.frame = view.bounds
