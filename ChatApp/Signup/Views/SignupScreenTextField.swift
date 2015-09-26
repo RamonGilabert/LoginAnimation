@@ -50,6 +50,7 @@ class SignupScreenTextField: UIView {
     layer.cornerRadius = 6
     layer.borderColor = UIColor.whiteColor().CGColor
     layer.borderWidth = 2
+    textField.autocapitalizationType = .Words
 
     switch kind {
     case .Name:
@@ -63,12 +64,15 @@ class SignupScreenTextField: UIView {
       logoLeftOffset = 15
       textField.attributedPlaceholder = NSAttributedString(string: "Email",
         attributes: [NSForegroundColorAttributeName : UIColor.lightGrayColor()])
+      textField.keyboardType = .EmailAddress
       logo.image = UIImage(named: ImageList.Login.emailLogo)
     case .Password:
       logoSize = CGSize(width: 17, height: 23)
       logoLeftOffset = 17
       textField.attributedPlaceholder = NSAttributedString(string: "Password",
         attributes: [NSForegroundColorAttributeName : UIColor.lightGrayColor()])
+      textField.keyboardAppearance = .Dark
+      textField.secureTextEntry = true
       logo.image = UIImage(named: ImageList.Login.passwordLogo)
     }
   }
