@@ -126,8 +126,10 @@ class SignupViewController: UIViewController {
       keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue() else { return }
 
     let offsetValue: CGFloat = UIScreen.mainScreen().nativeBounds.height == 960 ? 12 : 20
-    let alternativeOffset: CGFloat = nameTextField.textField.isFirstResponder() ? 55 : 0
-    let nameTextFieldAlpha: CGFloat = nameTextField.textField.isFirstResponder() ? 1 : 0
+    let alternativeOffset: CGFloat = nameTextField.textField.isFirstResponder()
+      && UIScreen.mainScreen().nativeBounds.height == 960 ? 55 : 0
+    let nameTextFieldAlpha: CGFloat = nameTextField.textField.isFirstResponder()
+      || UIScreen.mainScreen().nativeBounds.height != 960 ? 1 : 0
     let value = signupButton.frame.origin.y + signupButton.frame.size.height - (UIScreen.mainScreen().bounds.height - keyboardFrame.height - offsetValue + alternativeOffset)
     let logoAlpha: CGFloat = UIScreen.mainScreen().nativeBounds.height < 1335 ? 0 : 1
 
