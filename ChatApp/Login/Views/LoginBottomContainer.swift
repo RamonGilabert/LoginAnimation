@@ -1,15 +1,26 @@
 import UIKit
 import Cartography
 
+protocol LoginBottomContainerDelegate: class {
+
+  func signupButtonDidPress()
+  func loginButtonDidPress()
+}
+
 class LoginBottomContainer: UIView {
 
   lazy var signupButton: LoginScreenButton = LoginScreenButton(kind: .Signup)
   lazy var loginButton: LoginScreenButton = LoginScreenButton(kind: .Login)
 
+  weak var delegate: LoginBottomContainerDelegate?
+
   required init() {
     super.init(frame: CGRectZero)
 
-    for subview in [signupButton, loginButton] { addSubview(subview) }
+    for subview in [signupButton, loginButton] {
+      subview.delegate = self
+      addSubview(subview)
+    }
 
     setupConstraints()
   }
@@ -33,4 +44,11 @@ class LoginBottomContainer: UIView {
       login.height == LoginScreenButton.Dimensions.height
     }
   }
+}
+
+extension LoginBottomContainer: LoginScreenButtonDelegate {
+
+  func signupButtonDidPress() { delegate?.signupButtonDidPress() }
+
+  func loginButtonDidPress() { delegate?.loginButtonDidPress() }
 }
