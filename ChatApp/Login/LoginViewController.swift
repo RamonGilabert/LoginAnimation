@@ -53,6 +53,8 @@ class LoginViewController: UIViewController {
     subtitle.sizeToFit()
   }
 
+  // MARK: - Configuration
+
   func setupConstraints() {
     let totalHeight = UIScreen.mainScreen().bounds.height
 
@@ -80,7 +82,7 @@ class LoginViewController: UIViewController {
       welcomeTitle.bottom == welcomeTitle.superview!.centerY
       separator.top == welcomeTitle.bottom + 19
       subtitle.top == separator.bottom + 17
-      logo.centerY == logo.superview!.centerY - totalHeight / 4
+      logo.centerY == logo.superview!.centerY - totalHeight / 3.8
     }
   }
 
