@@ -2,7 +2,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
-      super.viewDidLoad()
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = UIColor.blackColor()
+  }
 }
