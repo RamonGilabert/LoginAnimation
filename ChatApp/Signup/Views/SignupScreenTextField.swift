@@ -5,7 +5,7 @@ class SignupScreenTextField: UIView {
 
   struct Dimensions {
     static let height: CGFloat = 52
-    static let offset: CGFloat = 72
+    static let offset: CGFloat = 80
     static let offsetBetween: CGFloat = 12
     static let offsetLeft: CGFloat = 45
   }
