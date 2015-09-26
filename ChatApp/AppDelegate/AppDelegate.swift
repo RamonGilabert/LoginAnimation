@@ -5,7 +5,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   lazy var chatsViewController: ChatsTableViewController = ChatsTableViewController()
-  lazy var loginViewController: LoginViewController = LoginViewController()
+  lazy var loginViewController: LoginMainViewController = LoginMainViewController()
 
   let currentUser = PFUser.currentUser()
   var window: UIWindow?

@@ -5,6 +5,8 @@ class LoginMainViewController: UIViewController {
 
   lazy var backgroundView: LoginBackgroundView = LoginBackgroundView()
   lazy var loginBottomContainer: LoginBottomContainer = LoginBottomContainer()
+  lazy var signupViewController: SignupViewController = SignupViewController()
+  lazy var loginViewController: LoginViewController = LoginViewController()
 
   lazy var logo: UIImageView = {
     let imageView = UIImageView()
@@ -98,13 +100,13 @@ class LoginMainViewController: UIViewController {
   }
 }
 
-extension LoginViewController: LoginBottomContainerDelegate {
+extension LoginMainViewController: LoginBottomContainerDelegate {
 
   func signupButtonDidPress() {
-    print("Signup")
+    presentViewController(signupViewController, animated: true, completion: nil)
   }
 
   func loginButtonDidPress() {
-    print("Login")
+    presentViewController(loginViewController, animated: true, completion: nil)
   }
 }
