@@ -18,7 +18,7 @@
 		291EDBF81BB6996F0061216B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBF71BB6996F0061216B /* SignupViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBFC1BB699CA0061216B /* LoginBottomContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBFB1BB699CA0061216B /* LoginBottomContainer.swift */; settings = {ASSET_TAGS = (); }; };
 		291EDBFE1BB6ECC60061216B /* FontList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBFD1BB6ECC60061216B /* FontList.swift */; settings = {ASSET_TAGS = (); }; };
-		291EDC001BB6EDF60061216B /* LoginScreenButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBFF1BB6EDF60061216B /* LoginScreenButtons.swift */; settings = {ASSET_TAGS = (); }; };
+		291EDC001BB6EDF60061216B /* LoginScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EDBFF1BB6EDF60061216B /* LoginScreenButton.swift */; settings = {ASSET_TAGS = (); }; };
 		62E43CD8E527331CF1F16EBC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C726429FC0E8C213D3C4FAB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		291EDBF71BB6996F0061216B /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		291EDBFB1BB699CA0061216B /* LoginBottomContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBottomContainer.swift; sourceTree = "<group>"; };
 		291EDBFD1BB6ECC60061216B /* FontList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontList.swift; sourceTree = "<group>"; };
-		291EDBFF1BB6EDF60061216B /* LoginScreenButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenButtons.swift; sourceTree = "<group>"; };
+		291EDBFF1BB6EDF60061216B /* LoginScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenButton.swift; sourceTree = "<group>"; };
 		5CA3B7FB4D147108690F9E45 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7C726429FC0E8C213D3C4FAB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43173F41DA1409C9E1DB33A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				291EDBFB1BB699CA0061216B /* LoginBottomContainer.swift */,
-				291EDBFF1BB6EDF60061216B /* LoginScreenButtons.swift */,
+				291EDBFF1BB6EDF60061216B /* LoginScreenButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				291EDBF11BB693B20061216B /* Information.swift in Sources */,
-				291EDC001BB6EDF60061216B /* LoginScreenButtons.swift in Sources */,
+				291EDC001BB6EDF60061216B /* LoginScreenButton.swift in Sources */,
 				291EDBF81BB6996F0061216B /* SignupViewController.swift in Sources */,
 				291EDBEB1BB6923C0061216B /* LoginViewController.swift in Sources */,
 				291EDBDF1BB691AC0061216B /* AppDelegate.swift in Sources */,

@@ -1,6 +1,12 @@
 import UIKit
 
-class LoginScreenButtons: UIButton {
+class LoginScreenButton: UIButton {
+
+  struct Dimensions {
+    static let width: CGFloat = 265
+    static let height: CGFloat = 52
+    static let paddingBetween: CGFloat = 12
+  }
 
   enum Kind {
     case Login, Signup
@@ -16,7 +22,7 @@ class LoginScreenButtons: UIButton {
   }
 
   required init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
+    fatalError("init(coder:) has not been implemented")
   }
 
   // MARK - Configuration

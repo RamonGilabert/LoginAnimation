@@ -3,22 +3,8 @@ import Cartography
 
 class LoginBottomContainer: UIView {
 
-  struct Dimensions {
-    static let buttonHeight: CGFloat = 74
-    static let buttonWidth: CGFloat = 120
-    static let offsetButtons: CGFloat = 5
-    static let offsetBottom: CGFloat = 25
-  }
-
-  lazy var signupButton: UIButton = {
-    let button = UIButton()
-    return button
-    }()
-
-  lazy var loginButton: UIButton = {
-    let button = UIButton()
-    return button
-    }()
+  lazy var signupButton: LoginScreenButton = LoginScreenButton(kind: .Signup)
+  lazy var loginButton: LoginScreenButton = LoginScreenButton(kind: .Login)
 
   required init() {
     super.init(frame: CGRectZero)
@@ -36,6 +22,15 @@ class LoginBottomContainer: UIView {
 
   func setupConstraints() {
     constrain(signupButton, loginButton) { signup, login in
+      signup.top == signup.superview!.top
+      signup.centerX == signup.superview!.centerX
+      signup.width == LoginScreenButton.Dimensions.width
+      signup.height == LoginScreenButton.Dimensions.height
+
+      login.top == signup.bottom + LoginScreenButton.Dimensions.paddingBetween
+      login.centerX == login.superview!.centerX
+      login.width == LoginScreenButton.Dimensions.width
+      login.height == LoginScreenButton.Dimensions.height
     }
   }
 }
