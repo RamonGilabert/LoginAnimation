@@ -10,7 +10,6 @@ class LoginViewController: UIViewController {
   lazy var passwordTextField: SignupScreenTextField = SignupScreenTextField(kind: .Password)
   lazy var transitionManager: LoginTransitionManager = LoginTransitionManager()
 
-
   lazy var logo: UIImageView = {
     let imageView = UIImageView()
     imageView.image = UIImage(named: ImageList.Login.logo)

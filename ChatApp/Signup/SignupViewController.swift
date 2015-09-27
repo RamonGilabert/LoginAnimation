@@ -8,6 +8,7 @@ class SignupViewController: UIViewController {
   lazy var nameTextField: SignupScreenTextField = SignupScreenTextField(kind: .Name)
   lazy var emailTextField: SignupScreenTextField = SignupScreenTextField(kind: .Email)
   lazy var passwordTextField: SignupScreenTextField = SignupScreenTextField(kind: .Password)
+  lazy var transitionManager: LoginTransitionManager = LoginTransitionManager()
 
   lazy var logo: UIImageView = {
     let imageView = UIImageView()
@@ -41,6 +42,7 @@ class SignupViewController: UIViewController {
     for subview in [backgroundView, container, closeButton] { view.addSubview(subview) }
 
     backgroundView.configureView()
+    transitioningDelegate = transitionManager
     setupConstraints()
 
     guard UIScreen.mainScreen().nativeBounds.height == 960 else { return }

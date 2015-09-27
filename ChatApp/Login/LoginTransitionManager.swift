@@ -4,14 +4,9 @@ class LoginTransitionManager: NSObject {
 
   private var presenting = true
 
-  func presentAnimation(mainController: LoginMainViewController, loginController: LoginViewController, show: Bool) {
-    if show {
-      loginController.view.alpha = 1
-      loginController.view.transform = CGAffineTransformIdentity
-    } else {
-      loginController.view.alpha = 0
-      loginController.view.transform = CGAffineTransformMakeScale(3, 3)
-    }
+  func presentAnimation(toViewController: UIViewController, show: Bool) {
+    toViewController.view.alpha = show ? 1 : 0
+    toViewController.view.transform = show ? CGAffineTransformIdentity : CGAffineTransformMakeScale(2, 2)
   }
 
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -22,21 +17,19 @@ class LoginTransitionManager: NSObject {
     (transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!,
       transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!)
 
-    let mainViewController = !presenting ? screens.to as! LoginMainViewController
-      : screens.from as! LoginMainViewController
-    let loginViewController = !presenting ? screens.from as! LoginViewController
-      : screens.to as! LoginViewController
+    let mainViewController = !presenting ? screens.to : screens.from
+    let toViewController = !presenting ? screens.from : screens.to
 
     let mainView = mainViewController.view
-    let loginView = loginViewController.view
+    let loginView = toViewController.view
 
-    if presenting { presentAnimation(mainViewController, loginController: loginViewController, show: false) }
+    if presenting { presentAnimation(toViewController, show: false) }
 
     container.addSubview(mainView)
     container.addSubview(loginView)
 
     UIView.animateWithDuration(duration, animations: {
-      self.presentAnimation(mainViewController, loginController: loginViewController, show: self.presenting)
+      self.presentAnimation(toViewController, show: self.presenting)
       }, completion: { _ in
         transitionContext.completeTransition(true)
         UIApplication.sharedApplication().keyWindow!.addSubview(screens.to.view)
@@ -47,7 +40,7 @@ class LoginTransitionManager: NSObject {
 extension LoginTransitionManager: UIViewControllerAnimatedTransitioning {
 
   func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-    return 0.75
+    return 0.5
   }
 }
 
