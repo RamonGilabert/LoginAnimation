@@ -2,6 +2,11 @@ import UIKit
 import Cartography
 import Transition
 
+protocol LoginViewControllerDelegate: class {
+
+  func didLoginSuccessfully()
+}
+
 class LoginViewController: UIViewController {
 
   lazy var backgroundView: LoginBackgroundView = LoginBackgroundView()
@@ -33,12 +38,15 @@ class LoginViewController: UIViewController {
     return view
     }()
 
+  weak var delegate: LoginViewControllerDelegate?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     for subview in [loginButton, logo, emailTextField, passwordTextField] { container.addSubview(subview) }
     for subview in [backgroundView, container, closeButton] { view.addSubview(subview) }
 
+    loginButton.addTarget(self, action: "loginButtonDidPress", forControlEvents: .TouchUpInside)
     setupConstraints()
     transitioningDelegate = transitionManager
     backgroundView.configureView()
@@ -120,6 +128,10 @@ class LoginViewController: UIViewController {
 
   override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     view.endEditing(true)
+  }
+
+  func loginButtonDidPress() {
+    delegate?.didLoginSuccessfully()
   }
 
   // MARK: - Notification methods

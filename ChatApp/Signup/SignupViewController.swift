@@ -1,6 +1,11 @@
 import UIKit
 import Cartography
 
+protocol SignupViewControllerDelegate: class {
+
+  func didSignupSuccessfully()
+}
+
 class SignupViewController: UIViewController {
 
   lazy var backgroundView: LoginBackgroundView = LoginBackgroundView()
@@ -33,6 +38,8 @@ class SignupViewController: UIViewController {
     return view
     }()
 
+  weak var delegate: SignupViewControllerDelegate?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -41,6 +48,7 @@ class SignupViewController: UIViewController {
     for subview in [signupButton, passwordTextField, emailTextField, nameTextField, logo] { container.addSubview(subview) }
     for subview in [backgroundView, container, closeButton] { view.addSubview(subview) }
 
+    signupButton.addTarget(self, action: "signupButtonDidPress", forControlEvents: .TouchUpInside)
     backgroundView.configureView()
     transitioningDelegate = transitionManager
     setupConstraints()
@@ -119,6 +127,10 @@ class SignupViewController: UIViewController {
 
   override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     view.endEditing(true)
+  }
+
+  func signupButtonDidPress() {
+    delegate?.didSignupSuccessfully()
   }
 
   // MARK: - Notifications

@@ -29,3 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
+extension AppDelegate: LoginViewControllerDelegate {
+
+  func didLoginSuccessfully() {
+    print("Login")
+  }
+}
+
+extension AppDelegate: SignupViewControllerDelegate {
+
+  func didSignupSuccessfully() {
+    print("Signup")
+  }
+}
