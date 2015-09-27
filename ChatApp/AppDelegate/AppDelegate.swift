@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       window?.rootViewController = currentUser != nil ? chatsViewController : loginViewController
       window?.makeKeyAndVisible()
 
+      loginViewController.loginViewController.delegate = self
+      loginViewController.signupViewController.delegate = self
       setupParseConfiguration()
 
       return true
@@ -32,7 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: LoginViewControllerDelegate {
 
   func didLoginSuccessfully() {
-    print("Login")
+    window = UIWindow()
+    window?.rootViewController = chatsViewController
+    window?.makeKeyAndVisible()
   }
 }
 
