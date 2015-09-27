@@ -8,6 +8,8 @@ class LoginViewController: UIViewController {
   lazy var loginButton: LoginScreenButton = LoginScreenButton(kind: .Login)
   lazy var emailTextField: SignupScreenTextField = SignupScreenTextField(kind: .Email)
   lazy var passwordTextField: SignupScreenTextField = SignupScreenTextField(kind: .Password)
+  lazy var transitionManager: LoginTransitionManager = LoginTransitionManager()
+
 
   lazy var logo: UIImageView = {
     let imageView = UIImageView()
@@ -39,6 +41,7 @@ class LoginViewController: UIViewController {
     for subview in [backgroundView, container, closeButton] { view.addSubview(subview) }
 
     setupConstraints()
+    transitioningDelegate = transitionManager
     backgroundView.configureView()
     container.frame = view.bounds
   }
