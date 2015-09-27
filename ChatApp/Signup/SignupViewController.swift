@@ -130,6 +130,7 @@ class SignupViewController: UIViewController {
   }
 
   func signupButtonDidPress() {
+    viewWillDisappear(true)
     delegate?.didSignupSuccessfully()
   }
 

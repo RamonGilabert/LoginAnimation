@@ -131,6 +131,7 @@ class LoginViewController: UIViewController {
   }
 
   func loginButtonDidPress() {
+    viewWillDisappear(true)
     delegate?.didLoginSuccessfully()
   }
 

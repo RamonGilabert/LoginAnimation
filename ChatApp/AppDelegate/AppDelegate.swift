@@ -43,6 +43,8 @@ extension AppDelegate: LoginViewControllerDelegate {
 extension AppDelegate: SignupViewControllerDelegate {
 
   func didSignupSuccessfully() {
-    print("Signup")
+    window = UIWindow()
+    window?.rootViewController = chatsViewController
+    window?.makeKeyAndVisible()
   }
 }
