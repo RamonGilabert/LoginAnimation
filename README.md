@@ -1,2 +1,1 @@
-# ChatApp
-A chat app for CoderEXP
+# LoginAnimation
